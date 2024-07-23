@@ -3,53 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <header>
-        <h1>Mi Portafolio</h1>
-        <p>Bienvenido a mi mundo creativo</p>
+        <h1>My Portfolio</h1>
     </header>
 
-    <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
+    <!-- Pestañas de navegación -->
+    <div class="tab-container">
+        <div class="tab-buttons">
+            <button class="tab-button active" onclick="openTab(event, 'proyectos')">Proyectos</button>
+            <button class="tab-button" onclick="openTab(event, 'sobre-mi')">Sobre mí</button>
+            <button class="tab-button" onclick="openTab(event, 'contacto')">Contacto</button>
+        </div>
 
-    <div class="container">
+        <!-- Secciones de contenido de cada pestaña -->
+        <div class="tab-content active" id="proyectos">
+            <section>
+                <h2>Projects</h2>
+                <h3>Third Place in Dinapsis Hackathon's.</h3>
+                <p>An intelligent buoy for water quality monitorization: <a href="https://www.dinapsis.es/innovacion/hackathons/costa-del-sol/" target="_blank">https://www.dinapsis.es/innovacion/hackathons/costa-del-sol/</a></p>
+                <p><a href="https://www.hidralia-sa.es/-/un-proyecto-para-medir-la-calidad-del-aire-en-estepona-a-trav%C3%A9s-de-bicicletas-de-uso-p%C3%BAblico-gana-la-3%C2%AA-edici%C3%B3n-de-dinapsis-hackat" target="_blank">https://www.hidralia-sa.es/-/un-proyecto-para-medir-la-calidad-del-aire-en-estepona-a-trav%C3%A9s-de-bicicletas-de-uso-p%C3%BAblico-gana-la-3%C2%AA-edici%C3%B3n-de-dinapsis-hackat</a></p>
+                <h3>Laser Tag</h3>
+                <p><a href="https://www.instructables.com/Laser-Tag-1/" target="_blank">https://www.instructables.com/Laser-Tag-1/</a></p>
+            </section>
+        </div>
 
-        <section id="inicio" class="inicio-section">
-            <div class="contenido">
-                <div class="imagen">
-                    <img src=foto.jpg alt="Mi Foto" width="450" height="550">
-                </div>
-                <div class="texto">
-                    <h2>Hi, I'm Antonio Peña Castillo!</h2>
-                    <p>.</p>
-                </div>
-            </div>
-        </section>
+        <div class="tab-content" id="sobre-mi">
+            <section>
+                <h2>About me</h2>
+                <p>I'm a native of Málaga software engineer, licensed in electronics systems by ...</p>
+            </section>
+        </div>
 
-        <section id="proyectos">
-            <h2>Proyectos Destacados</h2>
-            <!-- Detalles de tus proyectos -->
-        </section>
-
-        <section id="sobre-mi">
-            <h2> About me</h2>
-            <p>Información personal, habilidades, experiencia, etc.</p>
-        </section>
-
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <p>Puedes contactarme en: tu@email.com</p>
-        </section>
-
+        <div class="tab-content" id="contacto">
+            <section>
+                <h2>Contact</h2>
+                <p>email: antoniopcas12@gmail.com</p>
+                <p>linkedin: <a href="https://www.linkedin.com/in/antonio-peña-castillo-b92673182" target="_blank">www.linkedin.com/in/antonio-peña-castillo-b92673182</a></p>
+            </section>
+        </div>
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
